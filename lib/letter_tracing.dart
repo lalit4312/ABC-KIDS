@@ -35,6 +35,7 @@ class _LetterTracingPageState extends State<LetterTracingPage>
     });
 
     _animationController.forward();
+    _animationController.reverse();
   }
 
   @override
@@ -46,6 +47,16 @@ class _LetterTracingPageState extends State<LetterTracingPage>
   void _nextLetter() {
     setState(() {
       currentLetterIndex = (currentLetterIndex + 1) % letters.length;
+      points.clear();
+      _animationController.reset();
+      _animationController.forward();
+    });
+  }
+
+  void _previousLetter() {
+    setState(() {
+      currentLetterIndex =
+          (currentLetterIndex - 1 + letters.length) % letters.length;
       points.clear();
       _animationController.reset();
       _animationController.forward();
@@ -243,6 +254,13 @@ class _LetterTracingPageState extends State<LetterTracingPage>
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   _buildActionButton(
+                    icon: Icons.arrow_back,
+                    label: "",
+                    color: const Color(0xFF4ECDC4),
+                    onPressed: _previousLetter,
+                  ),
+
+                  _buildActionButton(
                     icon: Icons.restart_alt,
                     label: "Clear",
                     color: Color(0xFFFF9A8B),
@@ -254,7 +272,7 @@ class _LetterTracingPageState extends State<LetterTracingPage>
                   ),
                   _buildActionButton(
                     icon: Icons.arrow_forward,
-                    label: "Next",
+                    label: "",
                     color: Color(0xFF86A8E7),
                     onPressed: _nextLetter,
                   ),

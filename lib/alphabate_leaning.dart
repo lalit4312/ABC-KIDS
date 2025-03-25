@@ -89,6 +89,7 @@ class _AlphabetLearningPageState extends State<AlphabetLearningPage>
   Future<void> _playLetterSound() async {
     String letter = letters[currentLetterIndex]['letter'].toLowerCase();
     String audioPath = 'audio/$letter.mp3';
+    await _audioPlayer.setPlaybackRate(0.6);
 
     try {
       await _audioPlayer.play(AssetSource(audioPath));
