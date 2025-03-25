@@ -6,7 +6,6 @@ import 'package:alphabet_learning_app/matching_game.dart';
 import 'package:alphabet_learning_app/simple_word.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flame/game.dart';
 
 class HomePage extends StatelessWidget {
   final List<Map<String, dynamic>> activities = [
@@ -41,8 +40,8 @@ class HomePage extends StatelessWidget {
       'route': SimpleWordsPage(),
     },
     {
-      'title': 'Catch Me',
-      'icon': Icons.gamepad,
+      'title': 'Catch Letter',
+      'icon': Icons.videogame_asset,
       'gradient': [Color.fromARGB(255, 190, 68, 178), Color(0xFF4DB6AC)],
       'route': AlphabetCatchingGamePage(),
     },
