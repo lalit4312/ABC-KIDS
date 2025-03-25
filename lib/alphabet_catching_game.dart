@@ -7,7 +7,7 @@ import 'package:flame/particles.dart';
 import 'dart:math';
 
 class AlphabetCatchingGamePage extends StatelessWidget {
-  const AlphabetCatchingGamePage({Key? key}) : super(key: key);
+  const AlphabetCatchingGamePage({super.key});
 
   @override
   Widget build(BuildContext context) {
