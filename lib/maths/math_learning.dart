@@ -305,15 +305,18 @@ class _MathOperationsActivityState extends State<MathOperationsActivity> {
   void checkAnswer(int selectedAnswer) {
     setState(() {
       if (selectedAnswer == correctAnswer) {
-        score++;
+        score++; // Increment score if the answer is correct
         _lastAnswerCorrect = true;
-        // Delay to show correct animation before generating new problem
-        Future.delayed(const Duration(milliseconds: 500), () {
-          generateProblem();
-        });
       } else {
         _lastAnswerCorrect = false;
       }
+    });
+
+    // Delay to show feedback (Correct! or Oops!) before generating the next question
+    Future.delayed(const Duration(seconds: 1), () {
+      setState(() {
+        generateProblem(); // Generates the next problem after the delay
+      });
     });
   }
 

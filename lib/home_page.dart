@@ -4,7 +4,6 @@ import 'package:alphabet_learning_app/alphabets/alphabet_catching_game.dart';
 import 'package:alphabet_learning_app/alphabets/letter_tracing.dart';
 import 'package:alphabet_learning_app/alphabets/matching_game.dart';
 import 'package:alphabet_learning_app/drawing/drawing_category.dart';
-import 'package:alphabet_learning_app/drawing/drawing_page.dart';
 import 'package:alphabet_learning_app/maths/math_learning.dart';
 import 'package:alphabet_learning_app/alphabets/simple_word.dart';
 import 'package:flutter/material.dart';
@@ -64,6 +63,8 @@ class HomePage extends StatelessWidget {
       'route': DrawingCategoryPage(),
     },
   ];
+
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
