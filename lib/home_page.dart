@@ -3,6 +3,7 @@ import 'package:alphabet_learning_app/alphabate_song.dart';
 import 'package:alphabet_learning_app/alphabet_catching_game.dart';
 import 'package:alphabet_learning_app/letter_tracing.dart';
 import 'package:alphabet_learning_app/matching_game.dart';
+import 'package:alphabet_learning_app/math_learning.dart';
 import 'package:alphabet_learning_app/simple_word.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,6 +45,15 @@ class HomePage extends StatelessWidget {
       'icon': Icons.videogame_asset,
       'gradient': [Color.fromARGB(255, 190, 68, 178), Color(0xFF4DB6AC)],
       'route': AlphabetCatchingGamePage(),
+    },
+    {
+      'title': 'Math',
+      'icon': Icons.leaderboard_rounded,
+      'gradient': [
+        Color.fromARGB(255, 73, 220, 19),
+        Color.fromARGB(255, 55, 139, 16),
+      ],
+      'route': LearningActivitiesScreen(),
     },
   ];
 
