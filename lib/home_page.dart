@@ -1,10 +1,12 @@
-import 'package:alphabet_learning_app/alphabate_leaning.dart';
-import 'package:alphabet_learning_app/alphabate_song.dart';
-import 'package:alphabet_learning_app/alphabet_catching_game.dart';
-import 'package:alphabet_learning_app/letter_tracing.dart';
-import 'package:alphabet_learning_app/matching_game.dart';
-import 'package:alphabet_learning_app/math_learning.dart';
-import 'package:alphabet_learning_app/simple_word.dart';
+import 'package:alphabet_learning_app/alphabets/alphabate_leaning.dart';
+import 'package:alphabet_learning_app/alphabets/alphabate_song.dart';
+import 'package:alphabet_learning_app/alphabets/alphabet_catching_game.dart';
+import 'package:alphabet_learning_app/alphabets/letter_tracing.dart';
+import 'package:alphabet_learning_app/alphabets/matching_game.dart';
+import 'package:alphabet_learning_app/drawing/drawing_category.dart';
+import 'package:alphabet_learning_app/drawing/drawing_page.dart';
+import 'package:alphabet_learning_app/maths/math_learning.dart';
+import 'package:alphabet_learning_app/alphabets/simple_word.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -54,6 +56,12 @@ class HomePage extends StatelessWidget {
         Color.fromARGB(255, 55, 139, 16),
       ],
       'route': LearningActivitiesScreen(),
+    },
+    {
+      'title': 'Drawing',
+      'icon': Icons.draw,
+      'gradient': [Color.fromARGB(255, 190, 68, 178), Color(0xFF4DB6AC)],
+      'route': DrawingCategoryPage(),
     },
   ];
 
